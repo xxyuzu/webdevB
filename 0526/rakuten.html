@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>楽天会員登録画面</title>
+    <style>
+        input[type="email"],
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 300px;
+        }
+
+        input[type="submit"] {
+            width: 300px;
+            background-color: #0070f3;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <h1 class="title">楽天会員登録</h1>
+        <p>会員登録済みではないですか？</p><a
+            href="https://login.account.rakuten.com/sso/authorize?client_id=rakuten_ichiba_top_web&redirect_uri=https://www.rakuten.co.jp/&ui_locales=ja-JP&scope=openid&response_type=code#/sign_in">ログイン</a>
+        <br>
+        <br>
+        <label for="email">メールアドレス（必須）</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="email2">メールアドレス再入力（必須）</label>
+        <input type="email" id="email2" name="email2" required><br>
+        <label for="name">ユーザー名</label>
+        <input type="text" id="name" name="name"><br>
+        <input type="checkbox" id="agree" name="agree" required>
+        <label for="agree">メールアドレスをユーザIDとして使用
+        </label>
+        <br>
+        <label for="password">パスワード（必須）</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <label for="password2">パスワード再入力（必須）</label>
+        <input type="password" id="password2" name="password2" required>
+        <br>
+        <input type="checkbox" id="agree2" name="agree2" required>
+        <label for="agree2">パスワードを表示する
+        </label>
+        <br>
+        <br>
+        <div class="box">
+            <label for="sei">姓（漢字）（必須）</label>
+            <input type="text" id="sei" name="sei" required>
+            <br>
+            <label for="mei">名（漢字）（必須）</label>
+            <input type="text" id="mei" name="mei" required>
+        </div>
+        <br>
+        <div class="box">
+            <label for="sei2">姓（カタカナ）（必須）</label>
+            <input type="text" id="sei2" name="sei2" required>
+            <br>
+            <label for="mei2">名（カタカナ）（必須）</label>
+            <input type="text" id="mei2" name="mei2" required>
+        </div>
+        <br>
+        <p class="text">以下に同意いただいた上で、会員登録をお願いいたします。</p>
+        <ul>
+            <li><a href="https://corp.rakuten.co.jp/terms/">楽天会員に関する規約類</a></li>
+            <li><a href="https://privacy.rakuten.co.jp/">個人情報保護方針</a></li>
+        </ul>
+        <input type="checkbox" id="agree3" name="agree3" required>
+        <label for="agree3">楽天会員ニュースを購読する
+        </label>
+        <br>
+        <br>
+        <input type="submit" value="確認に進む">
+    </form>
+
+</body>
+
+</html>
+
+<!--forはidでつなぐ-->

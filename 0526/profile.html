@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="result.php" method="post" id="registration-form">
+        <label for="name">氏名（必須）：</label>
+        <input type="text" name="name" id="name" required>
+        <br>
+        <label for="age">年齢：</label>
+        <input type="number" name="age" id="age" required>
+        <br>
+        <label for="sei">性別：</label>
+
+        <input type="radio" id="sei" name="drone" value="sei" />
+        <label for="sei">男</label>
+        <input type="radio" id="sei" name="drone" value="sei" />
+        <label for="sei">女</label><input type="radio" id="sei" name="drone" value="sei" />
+        <label for="sei">その他</label>
+        <br>
+        <input type="submit" value="送信">
+    </form>
+</body>
+
+</html>

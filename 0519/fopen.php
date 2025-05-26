@@ -5,6 +5,7 @@ if ($fp === false) {
     exit;
 }
 
+
 //書籍名と著者名を表示する
 //htmlspecialchars()関数を使ってXSS対策を行う
 while ($row = fgetcsv($fp)) {
