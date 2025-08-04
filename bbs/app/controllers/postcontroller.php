@@ -84,6 +84,29 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
         exit;
     }
 } else {
-    var_dump('ファイル未選択またはエラー');
+    // var_dump('ファイル未選択またはエラー');
     exit;
 }
+
+
+
+require_once 'dbconnect.php'; // DB接続ファイル（ある場合）
+
+$name = $_POST['name'] ?? '';
+$comment = $_POST['comment'] ?? '';
+$imagePath = $uploadedImagePath ?? null;
+$drawingData = $_POST['drawingData'] ?? null;
+
+insert_post($pdo, $name, $comment, $imagePath, $drawingData);
+
+
+
+// 入力チェック・バリデーション（省略可）
+
+// DBへ保存
+$stmt = $pdo->prepare("INSERT INTO posts (name, comment, drawing_data, created_at) VALUES (?, ?, ?, NOW())");
+$stmt->execute([$name, $comment, $drawingData]);
+
+// 完了後、リダイレクト（または表示）
+header("Location: bbs.php"); // 投稿完了後の遷移先に合わせて変更
+exit;

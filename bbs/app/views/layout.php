@@ -10,15 +10,10 @@
 </head>
 
 <body>
-    <h1>掲示板</h1>
+    <h1>bulletin board</h1>
 
-    <?php if (!empty($errors)): ?>
-        <ul style="color:red;">
-            <?php foreach ($errors as $error): ?>
-                <li><?= str2html($error) ?></li>
-            <?php endforeach; ?>
-        </ul>
-    <?php endif; ?>
+
+
 
     <?php include __DIR__ . '/index.php'; ?>
 </body>
